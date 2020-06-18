@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component type="Form" name="GUI 2" cloudDestinationProperty="GUI 2" >
+  <component type="Container" name="Container" cloudDestinationProperty="Container" layout="BoxLayout" boxLayoutAxis="Y" >
+  </component>
+  <component type="TextField" name="tache" cloudBoundProperty="text" cloudDestinationProperty="TextField" text="" hint="Cr&#xe9;er votre note ..." >
+  </component>
+  <component type="Button" name="b3" cloudDestinationProperty="Button" text="Cr&#xe9;er" >
+  </component>
+</component>

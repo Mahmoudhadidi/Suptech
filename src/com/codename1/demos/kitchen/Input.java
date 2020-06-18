@@ -32,6 +32,7 @@ import com.codename1.ui.Component;
 import com.codename1.ui.Container;
 import com.codename1.ui.Dialog;
 import static com.codename1.ui.CN.*;
+import com.codename1.ui.Command;
 import com.codename1.ui.FontImage;
 import com.codename1.ui.Form;
 import com.codename1.ui.Image;
@@ -61,6 +62,8 @@ import java.io.IOException;
  * @author Shai Almog
  */
 public class Input  extends Demo {
+
+   
 
     public String getDisplayName() {
         return "Input";

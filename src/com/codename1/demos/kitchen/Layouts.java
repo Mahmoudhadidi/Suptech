@@ -35,6 +35,11 @@ import com.codename1.ui.layouts.LayeredLayout;
 import com.codename1.ui.plaf.Style;
 import com.codename1.ui.table.TableLayout;
 import static com.codename1.ui.CN.*;
+import com.codename1.ui.Form;
+import com.codename1.ui.events.ActionEvent;
+import com.codename1.ui.events.ActionListener;
+import com.esprit.gui.ListNoteForm;
+import examen.MyApplication;
 
 /**
  * Demonstrates some of the basic layout types available in Codename One with explanation and a smooth animation
@@ -42,6 +47,7 @@ import static com.codename1.ui.CN.*;
  * @author Shai Almog
  */
 public class Layouts  extends Demo {
+    
     public String getDisplayName() {
         return "Layouts";
     }
@@ -72,7 +78,8 @@ public class Layouts  extends Demo {
         Button gridLayout = new Button("Grid");
         Button tableLayout = new Button("Table");
         Button layeredLayout = new Button("Layered");
-        Container selection = BoxLayout.encloseY(flowLayout, flowCenterLayout, borderLayout, borderAbsoluteLayout, boxYLayout, boxXLayout, gridLayout, tableLayout, layeredLayout);
+        Button b1 = new Button("Gestion des Notes");
+        Container selection = BoxLayout.encloseY(flowLayout, flowCenterLayout, borderLayout, borderAbsoluteLayout, boxYLayout, boxXLayout, gridLayout, tableLayout, layeredLayout,b1);
         selection.setScrollableY(true);
         
         Component[] cmps = new Component[] {
@@ -86,8 +93,16 @@ public class Layouts  extends Demo {
         };
         Container layouts = FlowLayout.encloseIn(cmps);
         
-        borderLayout.addActionListener(e -> {
+        borderLayout.addActionListener((ActionEvent e) -> {
             resetMargin(layouts);
+            
+
+             
+            
+           
+            b1.addActionListener((ActionListener) (ActionEvent evt) -> {
+                MyApplication myApplication = new  MyApplication();
+            });
             
             // need to re-add the components since the layout requires a contraint
             layouts.removeAll();
@@ -207,4 +222,6 @@ public class Layouts  extends Demo {
                 + "the various OS's. This is just the tip of the iceberg. Layouts can be nested deeply and there are very "
                 + "complex layouts such as MiG, Group, GridBag etc. that aren't fully represented here...";
     }
+    
+    public Layouts(){}
 }

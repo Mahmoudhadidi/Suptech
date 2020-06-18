@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component type="Form" name="GUI 1" cloudDestinationProperty="GUI 1" scrollVisible="false" layout="BoxLayout" boxLayoutAxis="Y" >
+  <component type="Container" name="Container" cloudDestinationProperty="Container" layout="BoxLayout" boxLayoutAxis="Y" >
+    <component type="TextField" name="login" cloudBoundProperty="text" cloudDestinationProperty="login" text="" hint="Login ..." >
+    </component>
+    <component type="TextField" name="password" cloudBoundProperty="text" cloudDestinationProperty="password" text="" hint="Mot de passe ..." >
+    </component>
+    <component type="Button" name="b1" cloudDestinationProperty="b1" text="Se connecter" >
+    </component>
+  </component>
+</component>

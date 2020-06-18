@@ -58,7 +58,7 @@ public class RatingWidget {
     private String appstoreUrl;
     private String supportEmail;
     
-    private RatingWidget() {        
+    public RatingWidget() {        
     }
 
     private void init(String appstoreUrl, String supportEmail) {

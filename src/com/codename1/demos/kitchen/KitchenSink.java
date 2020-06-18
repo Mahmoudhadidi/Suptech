@@ -49,6 +49,14 @@ import com.codename1.ui.layouts.LayeredLayout;
 import com.codename1.ui.plaf.Style;
 import com.codename1.ui.plaf.UIManager;
 import com.codename1.ui.util.Resources;
+import com.esprit.gui.HomeForm;
+import com.esprit.gui.HomeFormTaches;
+import com.esprit.gui.ListEvaluationForm;
+import com.esprit.gui.ListNoteForm;
+import com.esprit.gui.Login;
+import com.esprit.gui.Register;
+import examen.MyApplication;
+
 
 public class KitchenSink  {
     private Resources res;
@@ -372,7 +380,14 @@ public class KitchenSink  {
         } else {
             f.removeCommand(listCommand);
         }
-
+        
+        //Menu principal de notre projet
+        f.getToolbar().addMaterialCommandToSideMenu("Créer un compte", FontImage.MATERIAL_AC_UNIT, e-> new Register(currentForm).show());
+        f.getToolbar().addMaterialCommandToSideMenu("Login", FontImage.MATERIAL_AC_UNIT, e-> new Login(currentForm).show());
+        // f.getToolbar().addMaterialCommandToSideMenu("Gestion des Notes & d'évaluations", FontImage.MATERIAL_AC_UNIT, e-> new HomeForm(currentForm).show());
+     //   f.getToolbar().addMaterialCommandToSideMenu("Login", FontImage.MATERIAL_BOOKMARK_BORDER, e-> new Login(currentForm).show());
+//         f.getToolbar().addMaterialCommandToSideMenu("Consulter la liste des Notes", FontImage.MATERIAL_ADD_TO_QUEUE, e-> new ListNoteForm(currentForm).show());
+//         f.getToolbar().addMaterialCommandToSideMenu("Consulter la listes des évaluations", FontImage.MATERIAL_ALBUM, e-> new ListEvaluationForm(currentForm).show());
         f.getToolbar().addMaterialCommandToSideMenu("CodenameOne.com", 
                 FontImage.MATERIAL_WEB, e -> execute("https://www.codenameone.com/"));
         f.getToolbar().addMaterialCommandToSideMenu("Getting Started", FontImage.MATERIAL_WEB, e -> execute("https://www.codenameone.com/"));
