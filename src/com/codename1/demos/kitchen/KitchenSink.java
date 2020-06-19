@@ -49,6 +49,7 @@ import com.codename1.ui.layouts.LayeredLayout;
 import com.codename1.ui.plaf.Style;
 import com.codename1.ui.plaf.UIManager;
 import com.codename1.ui.util.Resources;
+import com.mycompany.myapp.gui.HomeFormMatiere;
 
 public class KitchenSink  {
     private Resources res;
@@ -375,11 +376,12 @@ public class KitchenSink  {
 
         f.getToolbar().addMaterialCommandToSideMenu("CodenameOne.com", 
                 FontImage.MATERIAL_WEB, e -> execute("https://www.codenameone.com/"));
-        f.getToolbar().addMaterialCommandToSideMenu("Getting Started", FontImage.MATERIAL_WEB, e -> execute("https://www.codenameone.com/"));
-        f.getToolbar().addMaterialCommandToSideMenu("Developer Guide", FontImage.MATERIAL_WEB, e -> execute("https://www.codenameone.com/files/developer-guide.pdf"));
-        f.getToolbar().addMaterialCommandToSideMenu("JavaDoc (Reference)", FontImage.MATERIAL_WEB, e -> execute("https://www.codenameone.com/javadoc/"));
-        f.getToolbar().addMaterialCommandToSideMenu("Source Code", FontImage.MATERIAL_WEB, e -> execute("https://github.com/codenameone/KitchenSink"));
-        if(isNativeShareSupported() && getAppstoreURL() != null) {
+                
+        f.getToolbar().addMaterialCommandToSideMenu("Reclmation", FontImage.MATERIAL_ADD_TO_QUEUE, e -> execute("https://www.codenameone.com/"));
+     f.getToolbar().addMaterialCommandToSideMenu("Note", FontImage.MATERIAL_WEB, e -> execute("https://www.codenameone.com/"));
+        f.getToolbar().addMaterialCommandToSideMenu("Stage", FontImage.MATERIAL_WEB, e -> execute("https://www.codenameone.com/files/developer-guide.pdf"));  if(isNativeShareSupported() && getAppstoreURL() != null) {
+         f.getToolbar().addMaterialCommandToSideMenu("Matière", FontImage.MATERIAL_ADD_TO_QUEUE, e-> new HomeFormMatiere(currentForm).show());
+   
             f.getToolbar().addMaterialCommandToSideMenu("Spread the Word!", FontImage.MATERIAL_SHARE, e -> {
                 share("Check out the kitchen sink app from Codename One: " + getAppstoreURL(), null, null);
             });

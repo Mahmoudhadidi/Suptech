@@ -52,6 +52,9 @@ import com.codename1.ui.table.DefaultTableModel;
 import com.codename1.ui.table.Table;
 import com.codename1.ui.table.TableLayout;
 import com.codename1.ui.table.TableModel;
+import com.mycompany.myapp.entities.Matiere;
+import com.mycompany.myapp.services.ServiceMatiere;
+import java.util.ArrayList;
 
 /**
  * Demonstrates a typical chart/graph UI that is editable using Tables. Common for business applications
@@ -62,8 +65,20 @@ public class SalesDemo extends Demo {
     private static final String[] DEFAULT_COLUMNS =  {
         "Category", "Sales"
     };
+ /*   ArrayList<Matiere> m=ServiceTask.getInstance().getAllTasks();
+     public String afficherPatients() {
+         String var=null;
+        for(Matiere m:m){
+            var+="{\""+m.getName()+"\", new Double("+m.getCoefficient()+")}";
+        }
+       
+        return var;
+    }*/
+     
     private static final Object[][] DEFAULT_DATA = {
-        { "Products", new Double(500000)},
+        
+        { 
+            "Products", new Double(500000)},
         { "Virtual", new Double(300000) },
         { "Services", new Double(200000) }
     };
@@ -81,15 +96,15 @@ public class SalesDemo extends Demo {
     private static final int[] COLORS = {0x9688, 0x3f51b5, 0x9c27b0};
     
     public String getDisplayName() {
-        return "Sales";
+        return "Sales ";
     }
 
-    @Override
+   @Override
     public String getDescription() {
         return "Demonstrates a typical chart/graph UI that is editable using Tables. Common for business applications";
     }
 
-    @Override
+   @Override
     public String getSourceCodeURL() {
         return "https://github.com/codenameone/KitchenSink/blob/master/src/com/codename1/demos/kitchen/SalesDemo.java";
     }
