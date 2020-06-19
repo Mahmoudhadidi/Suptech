@@ -219,7 +219,7 @@ public class ClockDemo extends Demo {
             minuteHandWidthSmall = 1;
             hourHandWidth = 2;
         }        
-        
+        //jngjijlklldjhgn,fjjnfnhundff
         GeneralPath ticksPath = new GeneralPath();
 
         for (int i = 1; i <= 60; i++) {
