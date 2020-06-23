@@ -49,6 +49,7 @@ import com.codename1.ui.layouts.LayeredLayout;
 import com.codename1.ui.plaf.Style;
 import com.codename1.ui.plaf.UIManager;
 import com.codename1.ui.util.Resources;
+import com.suptech.GUI.ListeDemande;
 
 public class KitchenSink  {
     private Resources res;
@@ -215,7 +216,9 @@ public class KitchenSink  {
             currentForm.show();
             return;
         }
-        showSplashAnimation();
+        //showSplashAnimation();
+         ListeDemande liste= new ListeDemande();
+         liste.getF().show();
     }
 
     private void showMainUI() {
